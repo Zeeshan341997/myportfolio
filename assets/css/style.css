@@ -1462,7 +1462,7 @@ a#contact-btn {
     }
 
     .nav a {
-        font-size: 38px;
+        font-size: 28px;
     }
 
     .media ul {
@@ -1491,5 +1491,16 @@ a#contact-btn {
     
     .media {
         top: 20%;
+    }
+
+}
+
+@media(max-width:428px){
+    .SocialLinks li a {
+        display: none;
+    }
+
+    .SocialLinks li span.mob-inst-icon a,.SocialLinks li span.mob-link-icon a,.SocialLinks li span.mob-face-icon a {
+        display: block;
     }
 }
