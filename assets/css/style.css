@@ -1466,11 +1466,30 @@ a#contact-btn {
     }
 
     .media ul {
-        right: -16rem;
+        right: -11rem;
     }
 
     .scrolldown {
         right: -8rem;
         top: 58%;
+    }
+
+    .hero_section {
+        width: 240px;
+        height: 175px;
+    }
+
+    .block {
+        width: 240px;
+    }
+
+    .blockImg1 .laptop_screen {
+        width: 193px;
+        height: 70%;
+        margin-top: 34px;
+    }
+    
+    .media {
+        top: 20%;
     }
 }
