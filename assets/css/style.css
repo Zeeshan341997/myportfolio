@@ -1375,9 +1375,29 @@ a#contact-btn {
 
 .footer_btn_row .btn_red {
     background-color: var(--nytroRed);
-    display: inline;
+    display: block;
     text-align: center;
     height: 60px;
+}
+
+a.footer_btn {
+    width: 80%;
+}
+
+a.footer_btn .btn_red span.first_text {
+    transform: translateY(2px);
+}
+
+a.footer_btn .btn_red span.second_text {
+    transform: translateY(20px);
+}
+
+a.footer_btn .btn_red:hover span.first_text {
+    transform: translateY(-50px);
+}
+
+a.footer_btn .btn_red:hover span.second_text {
+    transform: translateY(-30px);
 }
 
 .footer_btn_row .btn_red:hover {
@@ -1491,6 +1511,15 @@ a#contact-btn {
     
     .media {
         top: 20%;
+    }
+
+    h2.main_heading {
+        font-size: 28px;
+    }
+
+    .main_heading::after {
+        width: 80px;
+        bottom: 20px;
     }
 
 }
