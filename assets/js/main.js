@@ -599,3 +599,24 @@ document.getElementById('download_btn').addEventListener('click', function() {
       document.body.removeChild(link);
   }, 4500); // 4500 milliseconds = 4.5 seconds
 });
+
+$(document).ready(function(){
+  $('.project_gallery').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows:false,
+    speed: 300,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
