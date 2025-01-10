@@ -449,6 +449,24 @@
                 </a>
             </div>
             <div class="row">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+
+                    <input type="text" name="bot-field" style="display:none;">
+                </form>                
+            </div>
+            <div class="row" style="margin-top: 90px;">
+                <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
                 <p>Copyright © 2025 Zeeshan Farooq</p>
                 <p>Designed and Developed by Zeeshan Farooq</p>
             </div>

@@ -1415,6 +1415,146 @@ a.footer_btn .btn_red:hover span.second_text {
     font-size: 16px;
 }
 
+.footer a {
+    margin: 0;
+    font-size: 16px;
+    color: var(--black);
+}
+
+form {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    /* background-color: var(--dark); */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: var(--box-shadow); */
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    /* font-weight: bold; */
+    color: var(--dark);
+  }
+  
+  form input[type="text"],
+  form input[type="email"]{
+    height: 40px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--dark);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--light);
+  }
+  
+  form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  form button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--nytroRed);
+    color: var(--light);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    /* width: 100%; */
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: var(--dark);
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: var(--nytroRed);
+    /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+  }
+  
+  .privacy_policy_sec {
+    position: relative;
+    width: 100%;
+    padding: 120px 0 0;
+    height: 200vh;
+  }
+
+  .privacy_policy_sec .row {
+    flex-direction: column;
+  }
+
+  .privacy_policy_sec h1 {
+    margin-bottom: 60px;
+  }
+
+.privacy_policy_sec li,
+.privacy_policy_sec h2,
+.privacy_policy_sec p {
+    color: var(--light);
+}
+
+.privacy_policy_sec p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.privacy_policy_sec h2 {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.privacy_policy_sec li {
+    font-size: 16px;
+}
+
+.privacy_policy_sec a {
+    color: var(--light);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive Code Start here */
 
 @media(max-width:1300px){
