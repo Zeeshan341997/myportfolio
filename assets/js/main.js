@@ -124,6 +124,13 @@ $('.media ul .inst').hover(
 );
 });
 
+// Detect the current page using the body class
+if (!document.body.classList.contains('animate-page')) {
+  // Remove GSAP animation for non-animated pages
+  gsap.set(".animate", { clearProps: "all" }); // Reset GSAP styles
+
+} else {
+
 
 if(window.innerWidth > 567){
   var textWrapper = document.querySelector(".hero_section_heading");
@@ -620,3 +627,5 @@ $(document).ready(function(){
     ]
   });
 });
+
+}
