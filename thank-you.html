@@ -33,7 +33,16 @@
     <!-- Gsap Links -->
     <!-- <script src="assets/js/TweenMax.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11552926859">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'AW-11552926859');
+    </script>
 </head>
 <body>
 
@@ -84,11 +93,11 @@
 
                     <!-- Logo -->
                     <div class="logo_wrapper">
-                        <div class="logo">
+                        <a href="/" class="logo">
                             Zeeshan <span>{Dev}</span>
                             <!-- <img src="assets/img/logo-white.png" alt="logo" class="logo_light">
                             <img src="assets/img/nt-logo.png" alt="logo" class="logo_dark"> -->
-                        </div>
+                        </a>
                     </div>
 
                     <!-- Contact Button -->

@@ -1463,7 +1463,7 @@ form label {
     resize: none;
   }
   
-  form button {
+form button {
     display: inline-block;
     padding: 10px 25px;
     background-color: var(--nytroRed);
@@ -1474,33 +1474,33 @@ form label {
     cursor: pointer;
     /* width: 100%; */
     transition: background-color 0.3s ease;
-  }
+}
   
-  form button:hover {
+form button:hover {
     background-color: var(--dark);
-  }
+}
   
-  form input:focus,
-  form textarea:focus {
+form input:focus,
+form textarea:focus {
     outline: none;
     border-color: var(--nytroRed);
     /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
-  }
+}
   
-  .privacy_policy_sec {
+.privacy_policy_sec {
     position: relative;
     width: 100%;
     padding: 120px 0 0;
     height: 200vh;
-  }
+}
 
-  .privacy_policy_sec .row {
+.privacy_policy_sec .row {
     flex-direction: column;
-  }
+}
 
-  .privacy_policy_sec h1 {
+.privacy_policy_sec h1 {
     margin-bottom: 60px;
-  }
+}
 
 .privacy_policy_sec li,
 .privacy_policy_sec h2,
