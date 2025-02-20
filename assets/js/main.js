@@ -176,7 +176,7 @@ TweenMax.to(".overlay", 0.5, {
 
 TweenMax.to(".hero_section", 2, {
   scale: "2",
-  y: "60%",
+  y: "70%",
   ease: Expo.easeInOut,
   delay: 3.5,
 });
@@ -275,90 +275,69 @@ ScrollTrigger.defaults({
 });
 
 // Animate From
-if (window.innerWidth > 1080){
-  $(".home").each(function (index) {
-    let triggerElement = $(this);
-    let targetElement = $(".hero_section");
-    let targetElement2 = $(".hero_section_text p");
+// if (window.innerWidth > 1080){
+//   $(".home").each(function (index) {
+//     let triggerElement = $(this);
+//     let targetElement = $(".hero_section");
+//     let targetElement2 = $(".hero_section_text p");
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerElement,
-        // trigger element - viewport
-        start: "top top",
-        end: "-120% bottom",
-        scrub: 1,
+//     let tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: triggerElement,
+//         // trigger element - viewport
+//         start: "top top",
+//         end: "-120% bottom",
+//         scrub: 1,
         
-      }
-    });
+//       }
+//     });
 
-    tl.to(targetElement, {
-      x: "-85%",
-      y:'100%',
-      position: 'fixed',
-      top:'20%',
-      duration: 1
-    });
-    tl.to(targetElement2, {
-      y:'0%',
-      duration: 1
-    });
+//     tl.to(targetElement, {
+//       x: "-85%",
+//       y:'100%',
+//       position: 'fixed',
+//       top:'20%',
+//       duration: 1
+//     });
+//     tl.to(targetElement2, {
+//       y:'0%',
+//       duration: 1
+//     });
   
-  });
+//   });
 
-}else{
-  $(".home").each(function (index) {
-    let triggerElement = $(this);
-    let targetElement = $(".hero_section");
-    let targetElement2 = $(".hero_section_text p");
+// }else{
+//   $(".home").each(function (index) {
+//     let triggerElement = $(this);
+//     let targetElement = $(".hero_section");
+//     let targetElement2 = $(".hero_section_text p");
 
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerElement,
-        // trigger element - viewport
-        start: "top top",
-        end: "-120% bottom",
-        scrub: 1,
+//     let tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: triggerElement,
+//         // trigger element - viewport
+//         start: "top top",
+//         end: "-120% bottom",
+//         scrub: 1,
         
-      }
-    });
+//       }
+//     });
 
-    tl.to(targetElement, {
-      x: "-60%",
-      y:'100%',
-      scale:'1.5',
-      position: 'fixed',
-      top:'20%',
-      duration: 1
-    });
-    tl.to(targetElement2, {
-      y:'0%',
-      duration: 1
-    });
+//     tl.to(targetElement, {
+//       x: "-60%",
+//       y:'100%',
+//       scale:'1.5',
+//       position: 'fixed',
+//       top:'20%',
+//       duration: 1
+//     });
+//     tl.to(targetElement2, {
+//       y:'0%',
+//       duration: 1
+//     });
   
-  });
-}
-
-// $(".hero_para").each(function (index) {
-//   let triggerElement = $(this);
-//   let targetElement = $(".hero_section_text p");
-
-//   let tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: triggerElement,
-//       // trigger element - viewport
-//       start: "-200px top",
-//       end: "-110% bottom",
-//       scrub: 1,
-      
-//     }
 //   });
-  
-//   tl.to(targetElement, {
-//     y: '0%',
-//   });
- 
-// });
+// }
 
 
 // Animate From
@@ -385,9 +364,9 @@ $(".heading_move").each(function (index) {
 $(".sticky_circle_wrapper").each(function (index) {
   let triggerElement = $(this);
   let targetElement = $(".sticky_circle_animation");
-  let targetElement1 = $(".hero_section");
-  let targetElement2 = $(".hero_section_text p");
-  let targetElement3 = $(".download_btn");
+  let targetElement1 = $(".ai-wave");
+  // let targetElement2 = $(".hero_section_text p");
+  let targetElement3 = $(".cmd_section");
   let targetElement4 = $(".skills_col");
 
   let tl = gsap.timeline({
@@ -399,45 +378,58 @@ $(".sticky_circle_wrapper").each(function (index) {
       scrub: 1
     }
   });
+  tl.fromTo(targetElement1, {
+      display: "flex",
+    },
+    {
+      display:'none',
+      // duration: 1
+    }
+  );
   tl.fromTo(targetElement, {
-    width: "30em",
-    height: "30em",
+    width: "200px",
+    height: "200px",
     borderRadius: "30em",
+    background: 'transparent',
     },
     {
       width: "95vw",
       height: "90vh",
       borderRadius: "0em",
+      background: '#eee',
+      // Animation:'none',
+      boxShadow:'none',
+    
       duration: 1
     }
   );
-  tl.fromTo(targetElement1, {
-    opacity: "1",
-    display: "block",
-    },
-    {
-      opacity: "0",
-      display: "none",
-      duration: 1
-    }
-  );
-  tl.fromTo(targetElement2, {
-    opacity: "1",
-    display: "block",
-    },
-    {
-      opacity: "0",
-      display: "none",
-      duration: 1
-    }
-  );
+
+  // tl.fromTo(targetElement1, {
+  //   opacity: "1",
+  //   display: "block",
+  //   },
+  //   {
+  //     opacity: "0",
+  //     display: "none",
+  //     duration: 1
+  //   }
+  // );
+  // tl.fromTo(targetElement2, {
+  //   opacity: "1",
+  //   display: "block",
+  //   },
+  //   {
+  //     opacity: "0",
+  //     display: "none",
+  //     duration: 1
+  //   }
+  // );
   tl.fromTo(targetElement3, {
-    opacity: "0",
-    y: "90%",
+    display: "none",
+    
     },
     {
-      opacity: "1",
-      y: "10%",
+      display: "grid",
       duration: 1
     }
   );
@@ -452,6 +444,13 @@ $(".sticky_circle_wrapper").each(function (index) {
     }
   );
 });
+
+
+const roundText = document.querySelector('.circle p');
+roundText.innerHTML = roundText.innerText.split('').map(
+  (char, i) =>
+    `<span style="transform:rotate(${i * 8.3}deg)">${char}</span>`
+).join('');
 
 // Animate From
 

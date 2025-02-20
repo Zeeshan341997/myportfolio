@@ -380,6 +380,7 @@ a#contact-btn {
     width: 20%;
 }
 
+#menu-btn i,
 #contact-btn i {
     color: var(--light);
     font-size: 24px;
@@ -393,6 +394,7 @@ a#contact-btn {
     justify-content: center;
 }
 
+.header.active #menu-btn i,
 .header.active #contact-btn i {
     color: var(--dark);
     border-color: var(--dark);
@@ -407,6 +409,7 @@ a#contact-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 700;
 }
 
 .btn_red span {
@@ -464,7 +467,7 @@ a#contact-btn {
   
 .scrolldown {
     position: absolute;
-    top: 36%;
+    top: 40%;
     right: -4rem;
     display: flex;
     transform: rotate(90deg);
@@ -564,10 +567,10 @@ a#contact-btn {
 
   .home {
     position: relative;
-    height: 200vh;
+    height: 170vh;
     overflow: hidden;
     /* margin-bottom: 12%; */
-    padding: 90px 0;
+    padding: 90px 0 0;
 }
 
   .hero_section {
@@ -609,7 +612,7 @@ a#contact-btn {
     position: absolute;
     width: 100%;
     height: 40vh;
-    top: 25%;
+    top: 28%;
     background-color: var(--dark);
     background-image: url('/assets/img/bg_dots.png');
   }
@@ -623,12 +626,71 @@ a#contact-btn {
     overflow: hidden;
 }
 
-.hero_para {
+.marquee_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 55vh;
+    padding: 60px 0 0px;
+    overflow: hidden;
+}
+
+.marquee_container .marquee {
+    padding: 20px 0;
+    transform: rotate(-9deg) scale(1.1);
+    width: 230%;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marquee_second {
+    transform: rotate(9deg) translateY(220px);
+    background: var(--nytroRed) !important;
+    z-index: -1;
+    position: relative;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes scroll-right {
+    to {
+        transform: translateX(0);
+    }
+    from {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee h2 {
+    word-spacing: 18px;
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    color: var(--black);
+    animation: scroll-left 50s linear infinite;
+    /* display: inline-block; */
+    /* padding-left: 100%; */
+}
+
+.marquee_second h2 {
+    animation: scroll-right 50s linear infinite;
+    color: var(--light);
+}
+
+/* .hero_para {
     position: fixed;
     top: 25%;
     left: 52%;
     width: 39%;
-}
+} */
 
 .hero_section_text {
     display: inline-block;
@@ -648,7 +710,7 @@ a#contact-btn {
     line-height: 1em;
 }
 
-.hero2_section_heading{
+.hero2_section_heading {
     position: relative;
     display: flex;
     align-items: center;
@@ -660,29 +722,29 @@ a#contact-btn {
     /* top: 0; */
 }
 
-.hero2_section_heading .heading_wrapper{
+.hero2_section_heading .heading_wrapper {
     /* position: sticky;
     top: 10%; */
     overflow: hidden;
     width: 100%;
-    height: 20vh;
+    height: 18vh;
 }
 
-.heading_move{
+.heading_move {
     transform: translateY(0%);
-    height: 140px;
+    height: 130px;
 }
 
-.heading_move h1{
+.heading_move h2 {
     text-align: center;
-    font-size: 11rem;
+    font-size: 9rem;
     font-weight: 900;
     color: var(--light);
     font-family: var(--secondary-font);
     text-transform: uppercase;
 }
 
-.hero_section_2{
+.hero_section_2 {
     position: relative;
     background: url('/assets/img/bg_dots.png') repeat;
     background-position: center;
@@ -695,27 +757,104 @@ a#contact-btn {
 .sticky_circle_wrapper {
     position: relative;
     width: 100%;
-    height: 300vh;
+    height: 320vh;
     padding: 6% 1rem;
     /* margin-top: 10%; */
 }
 
-.sticky_circle_animation{
+.sticky_circle_animation {
     position: sticky;
     position: -webkit-sticky;
     top: 12%;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0 auto;
     z-index: 9;
-    background-color: #000;
-    color: #0f0;
+    /* background-color: #000; */
+    /* color: #0f0; */
     /* background: url('/assets/img/sticky_circle_img2.jpg') no-repeat; */
     /* background-position: center 50%; */
     /* background-size: cover; */
     /* background-attachment: fixed; */
 }
 
-/* .sticky_circle_animation img{
+.ai-wave {
+    /* background-color: var(--light); */
+    position: relative;
+    box-shadow: 0 0 20px var(--light);
+    /* animation: pulse 2s infinite ease-in-out; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: round 10s linear infinite;
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle span {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 100px;
+    font-size: 16px;
+    color: var(--light);
+}
+
+.ai-wave::before,
+.ai-wave::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 0.7;
+    animation: ripple 2s infinite ease-out;
+}
+
+.ai-wave::after {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px #fff;
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px #fff;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* .sticky_circle_animation img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -723,16 +862,21 @@ a#contact-btn {
 
 .cmd_section {
     position: relative;
-    padding: 10px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    padding: 0 clamp(4rem, 12vw, 20rem);
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 10px; */
+    /* height: 100%; */
     height: 100%;
+    place-content: center;
 }
 
 .cmd_section h3 {
-    font-size: 18px;
+    font-size: 28px;
     font-family: var(--custom-font);
+    text-align: center;
 }
 .cmd_section h4 {
     font-size: 18px;
@@ -1440,11 +1584,13 @@ form label {
     color: var(--dark);
   }
   
+  form input[type="tel"],
   form input[type="text"],
   form input[type="email"]{
     height: 40px;
   }
 
+  form input[type="tel"],
   form input[type="text"],
   form input[type="email"],
   form textarea {
@@ -1578,10 +1724,18 @@ form textarea:focus {
         display: none;
     }
 
+    #menu-btn i,
     #contact-btn i {
         display: flex;
     }
 
+    #menu-btn .menu_toggle,
+    .menu-btn .text_animation,
+    #menu-btn .text_animation {
+        display: none;
+    }
+
+    #menu-btn,
     a#contact-btn {
         width: 10%;
     }
@@ -1620,17 +1774,16 @@ form textarea:focus {
     form label {
         text-align: left;
     }
+
+    .nav a {
+        font-size: 36px;
+    }
 }
 
 @media(max-width:567px){
 
     .header {
         padding: 15px 0;
-    }
-
-    .menu-btn .text_animation,
-    #menu-btn .text_animation {
-        display: none;
     }
 
     .menu-btn .menu_toggle,
@@ -1643,11 +1796,16 @@ form textarea:focus {
         width: 10%;
     }
 
+    #menu-btn i,
     #contact-btn i {
-        width: 45px;
-        height: 45px;
-        padding: 10px;
-        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+        font-size: 28px;
+    }
+
+    #menu-btn i {
+        font-size: 18px;
     }
 
     .nav {
@@ -1664,7 +1822,7 @@ form textarea:focus {
 
     .scrolldown {
         right: -8rem;
-        top: 58%;
+        top: 54%;
     }
 
     .hero_section {
@@ -1765,8 +1923,20 @@ form textarea:focus {
         gap: 10px;
     }
 
+    #menu-btn,
     a#contact-btn {
         width: 14%;
+    }
+
+    #menu-btn i, #contact-btn i {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+        font-size: 20px;
+    }
+
+    #menu-btn i {
+        font-size: 16px;
     }
 
     .home {
