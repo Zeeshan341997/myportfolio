@@ -877,6 +877,7 @@ a#contact-btn {
     font-size: 28px;
     font-family: var(--custom-font);
     text-align: center;
+    color: rgb(0, 217, 0);
 }
 .cmd_section h4 {
     font-size: 18px;
@@ -1969,8 +1970,39 @@ form textarea:focus {
         border-radius: 5px;
     }
 
+    .hero2_section_heading .heading_wrapper {
+        height: 50px;
+    }
+
+    .heading_move {
+        height: 50px;
+    }
+
+    .heading_move h2 {
+        font-size: 36px;
+    }
+
+    .marquee_container {
+        margin-top: 45vh;
+    }
+
+    .marquee_container .marquee {
+        width: 520%;
+        transform: rotate(-11deg) scale(1.1);
+    }
+
+    .marquee h2 {
+        font-size: 15px;
+        word-spacing: 8px;
+    }
+
     .cmd_section {
         flex-direction: column;
+        padding: 30px;
+    }
+
+    .cmd_section h3 {
+        font-size: 18px;
     }
 
     .position_col {
@@ -1984,6 +2016,10 @@ form textarea:focus {
         width: 90%;
         right: 0;
         margin: 0 auto;
+    }
+
+    .sticky_circle_wrapper {
+        padding: 26% 1rem;
     }
 
     .download_btn {

@@ -383,7 +383,7 @@ $(".sticky_circle_wrapper").each(function (index) {
     },
     {
       display:'none',
-      // duration: 1
+      duration: 1
     }
   );
   tl.fromTo(targetElement, {
@@ -396,7 +396,7 @@ $(".sticky_circle_wrapper").each(function (index) {
       width: "95vw",
       height: "90vh",
       borderRadius: "0em",
-      background: '#eee',
+      background: '#000',
       // Animation:'none',
       boxShadow:'none',
     
@@ -445,6 +445,47 @@ $(".sticky_circle_wrapper").each(function (index) {
   );
 });
 
+// const splitTypes = document.querySelectorAll('.reveal-type')
+
+// splitTypes.forEach((char,i) => {
+
+//   const bg = char.dataset.bgColor
+//   const fg = char.dataset.fgColor
+
+//   const text = new SplitType(char, { types: 'chars'})
+
+//   gsap.fromTo(text.chars, 
+//     {
+//         color: bg,
+//     },
+//     {
+//     color: fg,
+//     // duration: 0.3,
+//     // stagger: 0.02,
+//     scrollTrigger: {
+//       trigger: char,
+//       start: "center bottom",
+//       end: "center top",
+//       scrub: false,
+//       markers: true,
+//       toggleActions: 'play play reverse reverse'
+//     }
+//   })
+// })
+
+
+// const lenis = new Lenis()
+
+// lenis.on('scroll', (e) => {
+// console.log(e)
+// })
+
+// function raf(time) {
+// lenis.raf(time)
+// requestAnimationFrame(raf)
+// }
+
+// requestAnimationFrame(raf)
 
 const roundText = document.querySelector('.circle p');
 roundText.innerHTML = roundText.innerText.split('').map(
@@ -470,7 +511,7 @@ $(".main_heading").each(function (index) {
   });
   tl.from(targetElement, {
     x: "-100%",
-    duration: 3
+    // duration: 3
   });
   // tl.from(targetElement2,{
   //   left: "10%",
@@ -539,38 +580,38 @@ animate();
 //     })
 // })
 
-const typedText = document.querySelector('.typed-text');
-const typedText2 = document.querySelector('.typed-text2');
-const typedText3 = document.querySelector('.typed-text3');
-const texts = ["Html Css Bootstrap Tailwind css Javascript jQuery"];
-const texts2 = ["WordPress Shopify Webflow Squarespace Wix GoHighLevel"];
-const texts3 = ["Cpanel Hpanel Cyberpanel AWS"];
-let textIndex = 0;
-let charIndex = 0;
+// const typedText = document.querySelector('.typed-text');
+// const typedText2 = document.querySelector('.typed-text2');
+// const typedText3 = document.querySelector('.typed-text3');
+// const texts = ["Html Css Bootstrap Tailwind css Javascript jQuery"];
+// const texts2 = ["WordPress Shopify Webflow Squarespace Wix GoHighLevel"];
+// const texts3 = ["Cpanel Hpanel Cyberpanel AWS"];
+// let textIndex = 0;
+// let charIndex = 0;
 
-function typeText() {
-  if (charIndex < texts[textIndex].length) {
-    typedText.textContent += texts[textIndex].charAt(charIndex);
-    typedText2.textContent += texts2[textIndex].charAt(charIndex);
-    typedText3.textContent += texts3[textIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(typeText, 100);
-  } 
-  else {
-    setTimeout(() => {
-      typedText.textContent = "";
-      typedText2.textContent = "";
-      typedText3.textContent = "";
-      charIndex = 0;
-      textIndex = (textIndex + 1) % texts.length;
-      textIndex = (textIndex + 1) % texts2.length;
-      textIndex = (textIndex + 1) % texts3.length;
-      typeText();
-    }, 3000);
-  }
-}
+// function typeText() {
+//   if (charIndex < texts[textIndex].length) {
+//     typedText.textContent += texts[textIndex].charAt(charIndex);
+//     typedText2.textContent += texts2[textIndex].charAt(charIndex);
+//     typedText3.textContent += texts3[textIndex].charAt(charIndex);
+//     charIndex++;
+//     setTimeout(typeText, 100);
+//   } 
+//   else {
+//     setTimeout(() => {
+//       typedText.textContent = "";
+//       typedText2.textContent = "";
+//       typedText3.textContent = "";
+//       charIndex = 0;
+//       textIndex = (textIndex + 1) % texts.length;
+//       textIndex = (textIndex + 1) % texts2.length;
+//       textIndex = (textIndex + 1) % texts3.length;
+//       typeText();
+//     }, 3000);
+//   }
+// }
 
-typeText();
+// typeText();
 
 document.addEventListener("DOMContentLoaded",function(){
 	this.querySelector(".icon").addEventListener("click",function(){
@@ -595,16 +636,16 @@ document.addEventListener("DOMContentLoaded",function(){
 
 // JavaScript code to download a PDF 4 seconds after button click
 
-document.getElementById('download_btn').addEventListener('click', function() {
-  setTimeout(() => {
-      const link = document.createElement('a');
-      link.href = '/assets/cv/Zeeshan-Farooq(Web-Developer).pdf'; // Replace with the actual PDF file path
-      link.download = 'file.pdf'; // Desired file name
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-  }, 4500); // 4500 milliseconds = 4.5 seconds
-});
+// document.getElementById('download_btn').addEventListener('click', function() {
+//   setTimeout(() => {
+//       const link = document.createElement('a');
+//       link.href = '/assets/cv/Zeeshan-Farooq(Web-Developer).pdf'; // Replace with the actual PDF file path
+//       link.download = 'file.pdf'; // Desired file name
+//       document.body.appendChild(link);
+//       link.click();
+//       document.body.removeChild(link);
+//   }, 4500); // 4500 milliseconds = 4.5 seconds
+// });
 
 $(document).ready(function(){
   $('.project_gallery').slick({

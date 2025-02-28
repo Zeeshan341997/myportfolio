@@ -23,7 +23,7 @@
     }else {
       $msg = '<h1 class="text-center">Sorry your submission failed!</h1>';
       echo "<script>
-      window.open('/thank-you/?thanksMsg=$msg','_self')
+      window.open('/thank-you.html/?thanksMsg=$msg','_self')
       </script>";
     }
   }

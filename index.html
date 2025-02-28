@@ -497,7 +497,7 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="brief" required></textarea>
                     
-                    <button type="submit">Send</button>
+                    <button type="submit" name="send">Send</button>
 
                 </form>                
             </div>
@@ -512,6 +512,7 @@
     <!-- JQuery -->
     <script src="assets/js/jquery-3.6.1.min.js"></script>
     
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 
     <!-- <script src="assets/js/pixi.min.js"></script>
     <script src="assets/js/rgbKineticSlider.js"></script> -->
@@ -526,7 +527,6 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 
     <!-- Slick Slider JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <!-- Bootstrap Script -->
@@ -535,7 +535,7 @@
     <!-- Custom Script -->
     <script src="assets/js/main.js"></script>
 
-    <script>
+    <!-- <script>
         gsap.registerPlugin(ScrollTrigger)
 
         const splitTypes = document.querySelectorAll('.reveal-type')
@@ -557,10 +557,10 @@
                     stagger: 0.02,
                     scrollTrigger: {
                         trigger: char,
-                        start: "bottom 100%",
-                        end: "bottom top",
+                        start: "top top",
+                        end: "bottom bottom",
                         scrub: true,
-                        markers: false,
+                        markers: true,
                         toggleActions: 'play play reverse reverse'
                     }
             })
@@ -579,7 +579,8 @@
         }
 
         requestAnimationFrame(raf)
-    </script>
+    </script> -->
+
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
