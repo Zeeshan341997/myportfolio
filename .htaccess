@@ -28,7 +28,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
 
 
 
-#   these two lines of code will make user not to interact any file but index.php
+# these two lines of code will make user not to interact any file but index.php
 
 AddType text/cache-manifest .manifest
 # RewriteCond %{REQUEST_FILENAME} !^/(index\.html|index\.php)$

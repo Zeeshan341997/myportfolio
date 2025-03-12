@@ -1,4 +1,3 @@
-
 <section class="footer">
         <div class="container">
             <div class="footer_btn_row">
@@ -13,7 +12,7 @@
                 </a>
             </div>
             <div class="row">
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" netlify>
+                <form name="contact" method="POST" action="/leads/">
                     <input type="hidden" name="form-name" value="contact">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -21,16 +20,18 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
                     
-                    <button type="submit">Send</button>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="brief" required></textarea>
+                    
+                    <button type="submit" name="send">Send</button>
 
-                    <input type="text" name="bot-field" style="display:none;">
                 </form>                
             </div>
             <div class="row" style="margin-top: 90px;">
-                <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
+                <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
                 <p>Copyright © 2025 Zeeshan Farooq</p>
                 <p>Designed and Developed by Zeeshan Farooq</p>
             </div>
@@ -38,8 +39,9 @@
     </section>
     
     <!-- JQuery -->
-    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="/assets/js/jquery-3.6.1.min.js"></script>
     
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 
     <!-- <script src="assets/js/pixi.min.js"></script>
     <script src="assets/js/rgbKineticSlider.js"></script> -->
@@ -50,16 +52,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://unpkg.com/split-type"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> -->
 
     <!-- Slick Slider JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <!-- Bootstrap Script -->
     <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- Custom Script -->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
+
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

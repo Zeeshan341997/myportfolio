@@ -1641,6 +1641,10 @@ form textarea:focus {
     height: 200vh;
 }
 
+.thankyouPage {
+    height: 100vh;
+}
+
 .privacy_policy_sec .row {
     flex-direction: column;
 }
